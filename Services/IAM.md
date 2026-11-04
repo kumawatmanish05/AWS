@@ -1,4 +1,3 @@
-
 # AWS IAM – Identity and Access Management
 
 > A beginner-friendly guide to understanding, configuring, and using AWS IAM with practical examples.
@@ -704,4 +703,167 @@ An AWS Glue job can use an IAM role to:
 
 A machine learning application running on EC2 can use an IAM role to:
 - Access training datasets from S3.
-- Store
+- Store model artifacts.
+- Retrieve required AWS resources.
+
+## MLOps
+
+A CI/CD pipeline can assume an IAM role to:
+- Deploy applications.
+- Access deployment resources.
+- Publish artifacts.
+- Avoid storing permanent AWS credentials in source code.
+
+## Example: ML Pipeline
+
+```text
+        AWS S3
+    Training Dataset
+           |
+           ▼
+      EC2 Instance
+           |
+      IAM Role
+           |
+           ▼
+     Python ML Model
+           |
+           ▼
+     Trained Model
+           |
+           ▼
+        AWS S3
+    Model Artifacts
+```
+
+IAM ensures that the application has only the permissions required for its job.
+
+---
+
+# 13. IAM Best Practices
+
+1. Enable MFA for the root user and privileged identities.
+2. Follow the Principle of Least Privilege.
+3. Avoid using the root user for everyday tasks.
+4. Prefer IAM roles for AWS workloads.
+5. Avoid hardcoding access keys in Python files.
+6. Never commit AWS credentials to GitHub.
+7. Review user permissions regularly.
+8. Remove unused credentials and identities.
+9. Use managed policies or carefully scoped custom policies.
+10. Use IAM Access Analyzer to review access configurations.
+
+---
+
+# 14. Common IAM Errors
+
+| Error | Possible Reason | Solution |
+|---|---|---|
+| AccessDenied | Missing permission | Review applicable IAM and resource policies |
+| InvalidClientTokenId | Invalid or incorrect access key | Check credential configuration |
+| ExpiredToken | Temporary credentials expired | Obtain fresh credentials |
+| User is not authorized | Required action is not allowed | Review the relevant policy |
+| Unable to access S3 | Bucket or identity permissions are insufficient | Check IAM and bucket policies |
+
+---
+
+# 15. Interview Questions
+
+### Q1. What is AWS IAM?
+
+IAM is an AWS service that manages identities and controls access to AWS resources through permissions and policies.
+
+### Q2. What is the difference between an IAM user and an IAM role?
+
+An IAM user is an identity that can have long-term credentials. An IAM role is assumed by a trusted entity to obtain temporary security credentials.
+
+### Q3. What is an IAM policy?
+
+An IAM policy is a JSON document that defines which AWS actions are allowed or denied on specific resources.
+
+### Q4. What is the Principle of Least Privilege?
+
+It means giving an identity only the minimum permissions required to perform its task.
+
+### Q5. What is the difference between an IAM group and a role?
+
+A group organizes IAM users and shares permissions with them. A role is assumed by a trusted entity to obtain temporary credentials.
+
+### Q6. What is MFA?
+
+Multi-Factor Authentication adds an additional verification step to improve account security.
+
+### Q7. Is IAM a Regional or Global service?
+
+IAM is a global AWS service.
+
+### Q8. Is AWS IAM free?
+
+IAM is available at no additional charge.
+
+### Q9. Why should we avoid using the root user?
+
+The root user has extensive account-level privileges. Using it for everyday operations increases the risk of accidental or unauthorized changes.
+
+### Q10. Why are IAM roles preferred for EC2 applications?
+
+They provide temporary credentials and avoid the need to store long-term access keys on the instance.
+
+---
+
+# 16. Quick Revision
+
+| Concept | Remember |
+|---|---|
+| IAM | Manages AWS identities and permissions |
+| User | Individual identity |
+| Group | Collection of IAM users |
+| Role | Assumed identity with temporary credentials |
+| Policy | Defines permissions |
+| MFA | Extra authentication security |
+| ARN | Amazon Resource Name |
+| STS | Security Token Service |
+| Least Privilege | Minimum required permissions |
+| AWS CLI | Interact with AWS through terminal |
+
+### Final Summary
+
+AWS IAM is responsible for identity and access management in AWS.
+
+- Users represent identities.
+- Groups organize users.
+- Roles provide temporary access.
+- Policies define permissions.
+- MFA adds security.
+- Least Privilege reduces unnecessary access.
+
+---
+
+# 17. Learning Checklist
+
+### Theory
+- [ ] Understand AWS IAM.
+- [ ] Understand IAM Users.
+- [ ] Understand IAM Groups.
+- [ ] Understand IAM Roles.
+- [ ] Understand IAM Policies.
+- [ ] Learn Authentication vs Authorization.
+- [ ] Understand MFA.
+- [ ] Understand Least Privilege.
+
+### Practical
+- [ ] Open AWS IAM Console.
+- [ ] Create an IAM Group.
+- [ ] Attach an appropriate managed policy.
+- [ ] Create an IAM User.
+- [ ] Add the user to the group.
+- [ ] Verify inherited permissions.
+- [ ] Understand how to create an IAM Role.
+- [ ] Understand AWS CLI configuration.
+- [ ] Run `aws sts get-caller-identity`.
+
+---
+
+## Next Topic: AWS CLI (Command Line Interface)
+
+**Learning Goal:** Learn how to interact with AWS services using terminal commands and Python's Boto3 SDK.
