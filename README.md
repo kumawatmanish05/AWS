@@ -36,9 +36,9 @@ All service-wise notes, explanations, commands, and practical implementations ar
 
 | No. | AWS Service | Description | Documentation |
 |:---:|---|---|---|
-| 01 | IAM | Identity and Access Management | [Explore](Services/IAM.md) |
+| 01 | IAM | Identity and Access Management | [Explore](Services/IAM/IAM.md) |
 | 02 | S3 | Simple Storage Service | Coming Soon |
-| 03 | EC2 | Elastic Compute Cloud | Coming Soon |
+| 03 | EC2 | Elastic Compute Cloud |[Explore](Services/EC2/EC2.md) |
 | 04 | RDS | Relational Database Service | Coming Soon |
 | 05 | Lambda | Serverless Computing | Coming Soon |
 | 06 | VPC | Virtual Private Cloud | Coming Soon |
