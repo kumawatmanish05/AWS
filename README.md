@@ -115,8 +115,8 @@ AWS/
 |---|---|
 | Cloud Computing Fundamentals | ✅ Completed |
 | AWS Introduction | ✅ Completed |
-| IAM | 🔄 Learning |
-| AWS CLI | ⏳ Upcoming |
+| IAM |  ✅ Completed |
+| AWS CLI |  ✅ Completedg |
 | S3 | ⏳ Upcoming |
 | EC2 | ⏳ Upcoming |
 | RDS | ⏳ Upcoming |
