@@ -49,7 +49,7 @@ Instead of purchasing a physical computer and keeping it running 24/7, you can l
 
 EC2 is used when we need computing power without purchasing physical hardware.
 
-### Main Reasons
+### Main Reasons:
 
 1. **Scalability:** Increase or decrease computing resources according to requirements.
 2. **Flexibility:** Choose different operating systems, instance types, and configurations.
