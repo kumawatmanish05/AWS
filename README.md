@@ -48,7 +48,7 @@ All service-wise notes, explanations, commands, and practical implementations ar
 | 10 | Athena | Serverless SQL Queries | Coming Soon |
 | 11 | Redshift | Cloud Data Warehouse | Coming Soon |
 | 12 | SageMaker | Machine Learning Platform | Coming Soon |
-| 04 | RDS | Relational Database Service | Coming Soon |
+| 13 | RDS | Relational Database Service | Coming Soon |
 *More AWS services will be added as I progress.*
 
 ---
